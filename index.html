@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dò Mìn</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div id="menu" class="menu">
+    <h1>Dò Mìn</h1>
+    <div class="instructions">
+      <h2>Hướng Dẫn</h2>
+      <p>Mở tất cả ô không chứa mìn để thắng. Số trên ô cho biết số mìn xung quanh.</p>
+      <p>Cắm cờ để đánh dấu ô bạn nghi ngờ có mìn, nhưng cờ không xác nhận mìn. Bạn có thể cắm tối đa số cờ bằng số mìn.</p>
+      <p>Nhấn "Mở ô" hoặc "Cắm cờ". Click trái để mở, click phải để cắm/gỡ cờ (ở chế độ Cắm cờ).</p>
+    </div>
+    <div class="menu-buttons">
+      <button id="easyBtn">Dễ (8x8, 10 mìn)</button>
+      <button id="mediumBtn">Trung bình (16x16, 40 mìn)</button>
+      <button id="hardBtn">Khó (30x16, 99 mìn)</button>
+    </div>
+  </div>
+  <div id="game" class="game hidden">
+    <div class="control-bar">
+      <div class="control-left">
+        <button id="backBtn">
+          <i class="material-icons">home</i> Quay lại
+        </button>
+      </div>
+      <div class="control-center">
+        <span id="mineCounter">Cờ: 0/0</span>
+        <span id="timer">Thời gian: 0</span>
+      </div>
+      <div class="control-right">
+        <button id="modeToggleBtn" class="mode-toggle">
+          <i class="material-icons">visibility</i> Mở ô
+        </button>
+        <button id="replayBtn">
+          <i class="material-icons">replay</i> Chơi lại
+        </button>
+      </div>
+    </div>
+    <div id="statusMessage" class="status-message"></div>
+    <div id="board" class="board"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
