@@ -130,10 +130,12 @@ const DIFFICULTIES = {
   // Handle right click (desktop flag in flag mode)
   function handleRightClick(e) {
     e.preventDefault();
-    if (gameOver || !isFlagMode) return;
+    if (gameOver) return;
     const row = parseInt(e.target.dataset.row || e.target.parentElement.dataset.row);
     const col = parseInt(e.target.dataset.col || e.target.parentElement.dataset.col);
     if (board[row][col].isRevealed) return;
+    
+    // Luôn cắm cờ với click chuột phải
     handleFlag(row, col);
   }
   
